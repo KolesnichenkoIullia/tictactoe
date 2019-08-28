@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Square from './square'
+import Game from './game'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const DeleteAccount = () => (
+  <div>
+  <p>Are you sure?</p>
+  <button onClick={() => (alert("Hey, there"))}>Yep</button>
+  <button onClick={() => (alert("Lalala"))}>No</button>
+  </div>
+);
+  
+ReactDOM.render(
+  <div>
+  <h1><center>Hello, world</center></h1> 
+  <DeleteAccount/>
+  </div>,
+  document.getElementById('root')
+);
+  
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
